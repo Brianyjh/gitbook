@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Linear Regression · Brianyjh-GitBook-Demo</title>
+        <title>Softmax 回归 · Brianyjh-GitBook-Demo</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,10 +70,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="LR001.html" />
     
-    
-    <link rel="prev" href="LR-note.html" />
+    <link rel="prev" href="LR010.html" />
     
 
     <style>
@@ -172,14 +170,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="LR.html">
+        <li class="chapter " data-level="1.3.1" >
             
-                <a href="LR.html">
+                <span>
             
                     
-                    Linear Regression
+                    [Linear Regression]
             
-                </a>
+                </span>
             
 
             
@@ -251,6 +249,71 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.1.6" data-path="LR007.html">
+            
+                <a href="LR007.html">
+            
+                    
+                    R的奥秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="LR008.html">
+            
+                <a href="LR008.html">
+            
+                    
+                    Logistic 回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="LR009.html">
+            
+                <a href="LR009.html">
+            
+                    
+                    对数线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="LR010.html">
+            
+                <a href="LR010.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.10" data-path="LR011.html">
+            
+                <a href="LR011.html">
+            
+                    
+                    Softmax 回归
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -291,7 +354,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Linear Regression</a>
+        <a href="." >Softmax 回归</a>
     </h1>
 </div>
 
@@ -306,7 +369,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h3 id="softmax-&#x56DE;&#x5F52;">Softmax &#x56DE;&#x5F52;</h3>
+<ul>
+<li>K&#x5206;&#x7C7B;&#x3002;&#x7B2C;k&#x7C7B;&#x7684;&#x53C2;&#x6570;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mover accent="true"><mrow><mi>&#x3B8;</mi></mrow><mo>&#x20D7;</mo></mover><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\vec{\theta}_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.1278799999999998em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span></span></span><span style="top:-0.26343999999999995em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>,&#x7EC4;&#x6210;&#xB7;&#x4E8C;&#x7EF4;&#x77E9;&#x9635;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>&#x3B8;</mi><mrow><mi>k</mi><mo>&#xD7;</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\theta_{k \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.902771em;vertical-align:-0.208331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">&#xD7;</span><span class="mord mathit mtight">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></li>
+</ul>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB62a80e174013198e74a06137a5d11ad5?method=download&amp;shareKey=38d24295b8e48fead8d380199de6b161"></p>
+
                                 
                                 </section>
                             
@@ -333,14 +401,10 @@
 
             
                 
-                <a href="LR-note.html" class="navigation navigation-prev " aria-label="Previous page: 线性回归">
+                <a href="LR010.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 损失函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="LR001.html" class="navigation navigation-next " aria-label="Next page: 高斯分布">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -349,7 +413,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Linear Regression","level":"1.3.1","depth":2,"next":{"title":"高斯分布","level":"1.3.1.1","depth":3,"path":"LR001.md","ref":"LR001.md","articles":[]},"previous":{"title":"线性回归","level":"1.3","depth":1,"path":"LR-note.md","ref":"LR-note.md","articles":[{"title":"Linear Regression","level":"1.3.1","depth":2,"path":"LR.md","ref":"LR.md","articles":[{"title":"高斯分布","level":"1.3.1.1","depth":3,"path":"LR001.md","ref":"LR001.md","articles":[]},{"title":"似然函数","level":"1.3.1.2","depth":3,"path":"LR002.md","ref":"LR002.md","articles":[]},{"title":"解析式的求解","level":"1.3.1.3","depth":3,"path":"LR003.md","ref":"LR003.md","articles":[]},{"title":"复杂度惩罚因子","level":"1.3.1.4","depth":3,"path":"LR004.md","ref":"LR004.md","articles":[]},{"title":"梯度下降","level":"1.3.1.5","depth":3,"path":"LR006.md","ref":"LR006.md","articles":[]}]}]},"dir":"neutral"},"config":{"plugins":["donate","github-buttons@2.1.0","edit-link","splitter","katex","mathjax","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://note.youdao.com/yws/api/personal/file/WEBc4dadde2cce5858cb57381b2c25a9745?method=download&shareKey=c71d938b78e85cf17a344c16a6c0172b","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://note.youdao.com/yws/api/personal/file/WEB4ca13ef89631fe48ef7906f51e083a06?method=download&shareKey=7fbf2dac6ca8bcaad12563071cae452f","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"Brianyjh/","types":["star"],"size":"small"},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Brianyjh/code_hippocampus"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Brianyjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Brianyjh-GitBook-Demo","language":"zh-hans","gitbook":"*","description":"Brianyjh-GitBook-Demo"},"file":{"path":"LR.md","mtime":"2020-08-21T10:41:45.940Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-23T08:25:46.764Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Softmax 回归","level":"1.3.1.10","depth":3,"previous":{"title":"损失函数","level":"1.3.1.9","depth":3,"path":"LR010.md","ref":"LR010.md","articles":[]},"dir":"ltr"},"config":{"plugins":["donate","github-buttons@2.1.0","edit-link","splitter","katex","mathjax","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://note.youdao.com/yws/api/personal/file/WEBc4dadde2cce5858cb57381b2c25a9745?method=download&shareKey=c71d938b78e85cf17a344c16a6c0172b","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://note.youdao.com/yws/api/personal/file/WEB4ca13ef89631fe48ef7906f51e083a06?method=download&shareKey=7fbf2dac6ca8bcaad12563071cae452f","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"Brianyjh/","types":["star"],"size":"small"},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Brianyjh/code_hippocampus"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Brianyjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Brianyjh-GitBook-Demo","language":"zh-hans","gitbook":"*","description":"Brianyjh-GitBook-Demo"},"file":{"path":"LR011.md","mtime":"2020-08-23T15:30:36.331Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-24T03:27:43.840Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
