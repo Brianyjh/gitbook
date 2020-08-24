@@ -31,7 +31,7 @@
             "size": "small"
         },
         "edit-link": {
-            "base": "https://github.com/Brianyjh/code_hippocampus",
+            "base": "https://github.com/Brianyjh/gitbook/blob/master",
             "label": "Edit This Page"
         }
     }

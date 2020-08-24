@@ -15,13 +15,13 @@ if __name__ == "__main__":
     x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=1)
     model = Lasso()
     alpha_can = np.logspace(-3, 2, 10)
-    np.set_printoptions(suppress=True)  # 不要科学计数法
+    np.set_printoptions(suppress=True)
     print('alpha_can = ', alpha_can)
     lasso_model = GridSearchCV(model, param_grid={'alpha': alpha_can}, cv=5)  # 暴力调参，五折交叉验证
     lasso_model.fit(x_train, y_train)
     print("超参数：\n", lasso_model.best_params_)
 
-    order = y_test.argsort()# 做排序 让最终的图片
+    order = y_test.argsort()
     y_test = y_test.values[order]
     x_test = x_test.values[order, :]
     y_hat = lasso_model.predict(x_test)

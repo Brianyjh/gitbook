@@ -1,0 +1,556 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SVD算法 · Brianyjh-GitBook-Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Brianyjh">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="LR006.html" />
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"Brianyjh/","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="notebook.html">
+            
+                <a href="notebook.html">
+            
+                    
+                    笔记内容介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ML.html">
+            
+                <a href="ML.html">
+            
+                    
+                    Machine learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="LR-note.html">
+            
+                <a href="LR-note.html">
+            
+                    
+                    线性回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    [解释最小二乘]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="LR001.html">
+            
+                <a href="LR001.html">
+            
+                    
+                    基本公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="LR002.html">
+            
+                <a href="LR002.html">
+            
+                    
+                    似然函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="LR003.html">
+            
+                <a href="LR003.html">
+            
+                    
+                    解析式的求解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="LR004.html">
+            
+                <a href="LR004.html">
+            
+                    
+                    过拟合现象与正则项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    [算出解的方法]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.2.1" data-path="LR005.html">
+            
+                <a href="LR005.html">
+            
+                    
+                    SVD算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="LR006.html">
+            
+                <a href="LR006.html">
+            
+                    
+                    梯度下降
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="LR007.html">
+            
+                <a href="LR007.html">
+            
+                    
+                    R的奥秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="LR008.html">
+            
+                <a href="LR008.html">
+            
+                    
+                    Logistic 回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="LR010.html">
+            
+                <a href="LR010.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="LR009.html">
+            
+                <a href="LR009.html">
+            
+                    
+                    对数线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="LR011.html">
+            
+                <a href="LR011.html">
+            
+                    
+                    Softmax 回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    决策树与随机森林
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    []
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >SVD算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="moore-penrose&#x5E7F;&#x4E49;&#x9006;&#x77E9;&#x9635;&#x4F2A;&#x9006;">Moore-Penrose&#x5E7F;&#x4E49;&#x9006;&#x77E9;&#x9635;(&#x4F2A;&#x9006;)</h3>
+<ul>
+<li>&#x82E5;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>&#x4E3A;&#x975E;&#x5947;&#x5F02;&#x77E9;&#x9635;&#xFF0C;&#x5219;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>x</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">Ax=b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mord mathit">x</span><span class="mrel">=</span><span class="mord mathit">b</span></span></span></span>&#x7684;&#x89E3;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><mo>=</mo><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><msup><mrow><mo fence="true">(</mo><msup><mi>A</mi><mi>T</mi></msup><mi>A</mi><mo fence="true">)</mo></mrow><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mi>T</mi></msup><mi>b</mi></mrow><annotation encoding="application/x-tex">x\,\,=\,\,\left( A^TA \right) ^{-1}A^Tb</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9151079999999999em;"></span><span class="strut bottom" style="height:1.265118em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mrel"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="mrel">=</span></span><span class="minner"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">A</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="msupsub"><span class="vlist"><span style="top:-0.46399999999999997em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">b</span></span></span></span>
+&#x4ECE;&#x65B9;&#x7A0B;&#x89E3;&#x7684;&#x76F4;&#x89C2;&#x610F;&#x4E49;&#x4E0A;&#x770B;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#xFF1A;</li>
+</ul>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>A</mi><mo>+</mo></msup><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><mo>=</mo><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><msup><mrow><mo fence="true">(</mo><msup><mi>A</mi><mi>T</mi></msup><mi>A</mi><mo fence="true">)</mo></mrow><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A^+\,\,=\,\,\left( A^TA \right) ^{-1}A^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9151079999999999em;"></span><span class="strut bottom" style="height:1.265118em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mbin mtight">+</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="mrel">=</span></span><span class="minner"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">A</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="msupsub"><span class="vlist"><span style="top:-0.46399999999999997em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<ul>
+<li>&#x82E5;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>&#x4E3A;&#x53EF;&#x9006;&#x65B9;&#x9635;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>A</mi><mo>+</mo></msup><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><mo>=</mo><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><msup><mrow><mo fence="true">(</mo><msup><mi>A</mi><mi>T</mi></msup><mi>A</mi><mo fence="true">)</mo></mrow><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A^+\,\,=\,\,\left( A^TA \right) ^{-1}A^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9151079999999999em;"></span><span class="strut bottom" style="height:1.265118em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mbin mtight">+</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="mrel">=</span></span><span class="minner"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">A</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="msupsub"><span class="vlist"><span style="top:-0.46399999999999997em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x5373;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>A</mi><mrow><mo>&#x2212;</mo></mrow></msup></mrow><annotation encoding="application/x-tex">A^{-}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.771331em;"></span><span class="strut bottom" style="height:0.771331em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></li>
+</ul>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB11ef2dcb3f984856d564152fd8bac7dc?method=download&amp;shareKey=064a618e636255ff8fb31efcb835b160"></p>
+<ul>
+<li>&#x5F53;A&#x4E3A;&#x77E9;&#x9635;(&#x975E;&#x65B9;&#x9635;)&#x65F6;&#xFF0C;&#x79F0;A+&#x79F0;&#x4E3A;A&#x7684;&#x5E7F;&#x4E49;&#x9006;(&#x4F2A;&#x9006;)&#x3002;<ul>
+<li>&#x7528;SVD&#x53EF;&#x4EE5;&#x6C42;&#x51FA;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB632cf8b5ad9434e7c4c10cf8db2cf8b6?method=download&amp;shareKey=3980d5688cf5c88b419c07ad9ef20660">    </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="LR006.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 梯度下降">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SVD算法","level":"1.3.2.1","depth":3,"next":{"title":"梯度下降","level":"1.3.2.2","depth":3,"path":"LR006.md","ref":"LR006.md","articles":[]},"previous":{"title":"[算出解的方法]","level":"1.3.2","depth":2,"ref":"","articles":[{"title":"SVD算法","level":"1.3.2.1","depth":3,"path":"LR005.md","ref":"LR005.md","articles":[]},{"title":"梯度下降","level":"1.3.2.2","depth":3,"path":"LR006.md","ref":"LR006.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["donate","github-buttons@2.1.0","edit-link","splitter","katex","mathjax","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://note.youdao.com/yws/api/personal/file/WEBc4dadde2cce5858cb57381b2c25a9745?method=download&shareKey=c71d938b78e85cf17a344c16a6c0172b","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://note.youdao.com/yws/api/personal/file/WEB4ca13ef89631fe48ef7906f51e083a06?method=download&shareKey=7fbf2dac6ca8bcaad12563071cae452f","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"Brianyjh/","types":["star"],"size":"small"},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Brianyjh/gitbook/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Brianyjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Brianyjh-GitBook-Demo","language":"zh-hans","gitbook":"*","description":"Brianyjh-GitBook-Demo"},"file":{"path":"LR005.md","mtime":"2020-08-23T07:30:01.549Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-24T13:28:27.115Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

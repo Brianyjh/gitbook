@@ -12,7 +12,8 @@ if __name__ == "__main__":
     data = pd.read_csv(path)
     # data = np.genfromtxt('Advertising.csv', delimiter=',',skip_header=1)
     # print(data)
-    x = data.loc[:, ['TV', 'Radio', 'Newspaper']]
+    # x = data.loc[:, ['TV', 'Radio', 'Newspaper']]
+    x = data.loc[:, ['TV', 'Radio']]
     # x = data[:,1]
     y = data['Sales']
     # print(x)
@@ -51,24 +52,33 @@ if __name__ == "__main__":
     linreg = LinearRegression()
     model = linreg.fit(x_train, y_train)
     # print(model)
-    print(linreg.coef_)   #线性模型的系数
+    print(linreg.coef_)  # 线性模型的系数
     print("\n")
-    print(linreg.intercept_)  #截距
+    print(linreg.intercept_)  # 截距
 
     order = y_test.argsort(axis=0)
+    print(order)
+    print(y_test.values)
+    print("\n")
+    print(y_test.values[order])
     y_test = y_test.values[order]
     x_test = x_test.values[order, :]
     y_hat = linreg.predict(x_test)
-    mse = np.average((y_hat - np.array(y_test)) ** 2)
-
-    # print("hhhhh\n")
-    # print(y_test)# 线性模型的系数
-    # print("\n")
-    # print(order)
-
-
-
-
-
-
+    mse = np.average((y_hat - np.array(y_test)) ** 2)  # Mean Squared Error
+    rmse = np.sqrt(mse)  # Root Mean Squared Error
+    print("MSE = ", mse)
+    print("RMSE = ", rmse)
+    print("Train-----R2 = ", linreg.score(x_train, y_train))
+    print("Test------R2 = ", linreg.score(x_test, y_test))
+    plt.figure(facecolor='w')
+    t = np.arange(len(x_test))
+    plt.plot(t, y_test, 'r-', linewidth=2, label="真实数据")
+    plt.plot(t, y_hat, 'g-', linewidth=2, label="预测数据")
+    plt.legend(loc='lower right',prop=my_font)
+    plt.grid()
     plt.show()
+
+    # # print("hhhhh\n")
+    # # print(y_test)# 线性模型的系数
+    # # print("\n")
+    # # print(order)
