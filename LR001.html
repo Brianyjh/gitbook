@@ -1,0 +1,500 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>高斯分布 · Brianyjh-GitBook-Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Brianyjh">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="LR002.html" />
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"Brianyjh/","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="notebook.html">
+            
+                <a href="notebook.html">
+            
+                    
+                    笔记内容介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ML.html">
+            
+                <a href="ML.html">
+            
+                    
+                    Machine learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="LR-note.html">
+            
+                <a href="LR-note.html">
+            
+                    
+                    线性回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    [Linear Regression]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1.1" data-path="LR001.html">
+            
+                <a href="LR001.html">
+            
+                    
+                    高斯分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="LR002.html">
+            
+                <a href="LR002.html">
+            
+                    
+                    似然函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="LR003.html">
+            
+                <a href="LR003.html">
+            
+                    
+                    解析式的求解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="LR004.html">
+            
+                <a href="LR004.html">
+            
+                    
+                    复杂度惩罚因子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="LR006.html">
+            
+                <a href="LR006.html">
+            
+                    
+                    梯度下降
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="LR007.html">
+            
+                <a href="LR007.html">
+            
+                    
+                    R的奥秘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="LR008.html">
+            
+                <a href="LR008.html">
+            
+                    
+                    Logistic 回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="LR009.html">
+            
+                <a href="LR009.html">
+            
+                    
+                    对数线性模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="LR010.html">
+            
+                <a href="LR010.html">
+            
+                    
+                    损失函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="LR011.html">
+            
+                <a href="LR011.html">
+            
+                    
+                    Softmax 回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >高斯分布</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex"> y = ax + b </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mrel">=</span><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mbin">+</span><span class="mord mathit">b</span></span></span></span></li>
+</ul>
+<p>&#x7531;&#x4E8E;&#x9AD8;&#x4E2D;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B66;&#x8FC7;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x56DE;&#x5F52;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x8BA8;&#x8BBA;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x56DE;&#x5F52;&#x7684;&#x60C5;&#x51B5;</p>
+<h4 id="&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x60C5;&#x5F62;">&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x60C5;&#x5F62;</h4>
+<h5 id="&#x4E24;&#x4E2A;&#x53D8;&#x91CF;">&#x4E24;&#x4E2A;&#x53D8;&#x91CF;</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>h</mi><mrow><mi>&#x3B8;</mi></mrow></msub><mo>=</mo><msub><mi>&#x3B8;</mi><mn>0</mn></msub><mo>+</mo><msub><mi>&#x3B8;</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>&#x3B8;</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex"> h_{\theta}=\theta_0+\theta_1 x_1+\theta_2 x_2 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">h</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">&#x3B8;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>h</mi><mrow><mi>&#x3B8;</mi></mrow></msub><mo>=</mo><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>&#x3B8;</mi><mi>i</mi></msub><msub><mi>x</mi><mi>i</mi></msub><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><mo>=</mo><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><msup><mi>&#x3B8;</mi><mi>T</mi></msup><mi>x</mi></mrow></mrow><annotation encoding="application/x-tex">
+h_{\theta}=\sum\limits_{i=0}^n{\theta _ix_i\,\,=\,\,\theta ^Tx}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.3513970000000004em;"></span><span class="strut bottom" style="height:2.329066em;vertical-align:-0.9776689999999999em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">h</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">&#x3B8;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mop op-limits"><span class="vlist"><span style="top:0.8776689999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">0</span></span></span></span><span style="top:-0.000005000000000088267em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol small-op">&#x2211;</span></span></span><span style="top:-0.9500050000000002em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="mrel">=</span></span><span class="mord"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B8;</mi></mrow><annotation encoding="application/x-tex">\theta </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span></span></span></span>&#x7684;&#x7CFB;&#x6570;&#x77E9;&#x9635;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>=</mo><mrow><mo fence="true">[</mo><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><mn>1</mn><mo separator="true">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex"> x=\left[ \,\,1,x_1,x_2 \right] </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mrel">=</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">[</span><span class="mord mathrm"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="mord mathrm">1</span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">]</span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B8;</mi></mrow><annotation encoding="application/x-tex">\theta </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span></span></span></span>&#x4E5F;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;&#x77E9;&#x9635;&#x5F62;&#x5F0F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B8;</mi><mo>=</mo><msup><mrow><mo fence="true">[</mo><mspace width="0.16667em"></mspace><mspace width="0.16667em"></mspace><msub><mi>&#x3B8;</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>&#x3B8;</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>&#x3B8;</mi><mn>2</mn></msub><mo fence="true">]</mo></mrow><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">
+\theta =\left[ \,\,\theta _0,\theta _1,\theta _2 \right] ^T
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8423309999999999em;"></span><span class="strut bottom" style="height:1.092331em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="mrel">=</span><span class="minner"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">[</span><span class="mord"><span class="mspace thinspace"></span><span class="mspace thinspace"></span><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">]</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<h4 id="&#x4F7F;&#x7528;&#x6781;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x89E3;&#x91CA;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#xFF08;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#x7684;&#x672C;&#x8D28;&#xFF09;">&#x4F7F;&#x7528;&#x6781;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x89E3;&#x91CA;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#xFF08;&#x6700;&#x5C0F;&#x4E8C;&#x4E58;&#x7684;&#x672C;&#x8D28;&#xFF09;</h4>
+<h5 id="&#x8BEF;&#x5DEE;">&#x8BEF;&#x5DEE;</h5>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB8d120b4bb8785c41f2cdc4a5de0e9361?method=download&amp;shareKey=4cd503bdaee9959e6af0ebd03b1b0685">
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>y</mi><mrow><mi>i</mi></mrow></msup><mo>=</mo><msup><mi>&#x3B8;</mi><mrow><mi>T</mi></mrow></msup><msup><mi>x</mi><mrow><mi>i</mi></mrow></msup><mo>+</mo><msup><mi>&#x3B5;</mi><mrow><mrow><mo fence="true">(</mo><mi>i</mi><mo fence="true">)</mo></mrow></mrow></msup></mrow><annotation encoding="application/x-tex">y^{i} = \theta^{T}x^{i} + \varepsilon ^{\left( i \right)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8879999999999999em;"></span><span class="strut bottom" style="height:1.0824399999999998em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">&#x3B5;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0.7em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="minner scriptstyle uncramped mtight"><span class="mopen style-wrap reset-scriptstyle scriptstyle uncramped mtight" style="top:0em;"><span class="mtight">(</span></span><span class="mord mathit mtight">i</span><span class="mclose style-wrap reset-scriptstyle scriptstyle uncramped mtight" style="top:0em;"><span class="mtight">)</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0.7em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p>&#x8BEF;&#x5DEE;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3B5;</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mo>(</mo><mn>1</mn><mo>&#x2A7D;</mo><mi>i</mi><mo>&#x2A7D;</mo><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\varepsilon^{(i)}(1\leqslant i\leqslant m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8879999999999999em;"></span><span class="strut bottom" style="height:1.138em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3B5;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mopen mtight">(</span><span class="mord mathit mtight">i</span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mrel amsrm">&#x2A7D;</span><span class="mord mathit">i</span><span class="mrel amsrm">&#x2A7D;</span><span class="mord mathit">m</span><span class="mclose">)</span></span></span></span>&#x662F;&#x72EC;&#x7ACB;&#x540C;&#x5206;&#x5E03;&#x7684;&#xFF0C;&#x670D;&#x4ECE;&#x5747;&#x503C;&#x4E3A;0&#xFF0C;&#x65B9;&#x5DEE;&#x4E3A;&#x67D0;&#x5B9A;&#x503C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3C3;</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sigma ^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">&#x3C3;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x7684;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x3002;
+&#x5404;&#x4E2A;&#x7EC6;&#x679D;&#x672B;&#x8282;&#x6784;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x4E2A;&#x9707;&#x8361;&#xFF0C;&#x6211;&#x4EEC;&#x5982;&#x679C;&#x770B;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#x770B;&#x505A;&#x4E3A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#xFF0C;&#x5F53;&#x8DB3;&#x591F;&#x591A;&#x7684;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x53E0;&#x52A0;&#x4E4B;&#x540E;&#xFF0C;&#x5F62;&#x6210;&#x7684;&#x5206;&#x5E03;&#xFF0C;&#x6839;&#x636E;&#x4E2D;&#x5FC3;&#x6781;&#x9650;&#x5B9A;&#x7406;&#xFF0C;&#x5B83;&#x7684;&#x5206;&#x5E03;&#x4E3A;<strong>&#x6B63;&#x6001;&#x5206;&#x5E03;</strong></p>
+<ul>
+<li>&#x539F;&#x56E0;&#xFF1A;&#x4E2D;&#x5FC3;&#x6781;&#x9650;&#x5B9A;&#x7406;</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x5747;&#x503C;&#x4E00;&#x5B9A;&#x4E3A;0&#xFF1F;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4E0D;&#x4E3A;0&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>&#x3B8;</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\theta_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x4E3A;&#x622A;&#x8DDD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x56FE;&#x50CF;&#x7684;&#x5747;&#x503C;&#x4E3A;0</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="LR002.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 似然函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"高斯分布","level":"1.3.1.1","depth":3,"next":{"title":"似然函数","level":"1.3.1.2","depth":3,"path":"LR002.md","ref":"LR002.md","articles":[]},"previous":{"title":"[Linear Regression]","level":"1.3.1","depth":2,"ref":"","articles":[{"title":"高斯分布","level":"1.3.1.1","depth":3,"path":"LR001.md","ref":"LR001.md","articles":[]},{"title":"似然函数","level":"1.3.1.2","depth":3,"path":"LR002.md","ref":"LR002.md","articles":[]},{"title":"解析式的求解","level":"1.3.1.3","depth":3,"path":"LR003.md","ref":"LR003.md","articles":[]},{"title":"复杂度惩罚因子","level":"1.3.1.4","depth":3,"path":"LR004.md","ref":"LR004.md","articles":[]},{"title":"梯度下降","level":"1.3.1.5","depth":3,"path":"LR006.md","ref":"LR006.md","articles":[]},{"title":"R的奥秘","level":"1.3.1.6","depth":3,"path":"LR007.md","ref":"LR007.md","articles":[]},{"title":"Logistic 回归","level":"1.3.1.7","depth":3,"path":"LR008.md","ref":"LR008.md","articles":[]},{"title":"对数线性模型","level":"1.3.1.8","depth":3,"path":"LR009.md","ref":"LR009.md","articles":[]},{"title":"损失函数","level":"1.3.1.9","depth":3,"path":"LR010.md","ref":"LR010.md","articles":[]},{"title":"Softmax 回归","level":"1.3.1.10","depth":3,"path":"LR011.md","ref":"LR011.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["donate","github-buttons@2.1.0","edit-link","splitter","katex","mathjax","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://note.youdao.com/yws/api/personal/file/WEBc4dadde2cce5858cb57381b2c25a9745?method=download&shareKey=c71d938b78e85cf17a344c16a6c0172b","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://note.youdao.com/yws/api/personal/file/WEB4ca13ef89631fe48ef7906f51e083a06?method=download&shareKey=7fbf2dac6ca8bcaad12563071cae452f","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"Brianyjh/","types":["star"],"size":"small"},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Brianyjh/code_hippocampus"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Brianyjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Brianyjh-GitBook-Demo","language":"zh-hans","gitbook":"*","description":"Brianyjh-GitBook-Demo"},"file":{"path":"LR001.md","mtime":"2020-08-22T12:18:00.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-23T14:40:05.742Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
