@@ -3,6 +3,7 @@
 * [介绍](README.md)
 * [笔记内容介绍](notebook.md)
   - [Machine learning](ML.md)
+  - [插入](git.md)
 * [线性回归](LR-note.md) 
   * [解释最小二乘]
      - [基本公式](LR001.md)
